@@ -1,0 +1,14 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^leopard.co.nz [NC] 
+RewriteRule ^(.*)$ http://www.leopard.co.nz/leopard-cms [L,R=301]
+
+RewriteRule requests/service \/leopard-cms\/includes\/inc_files\/datamanager\/core\/system\.php [PT,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php/$1 [L] 
+
+
+ErrorDocument 404 /templates/404.html
+ErrorDocument 403 /templates/404.html
