@@ -1,0 +1,146 @@
+.grid {
+  position: relative;
+  margin: 25px 0;
+}
+
+.grid__header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.grid__heading {
+  font-size: 46px;
+}
+
+.grid__col {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.grid__col__figure {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  
+}
+
+.grid__col__figure__img {
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-transform: scale(1.1) translateZ(0px);
+  transform: scale(1.1) translateZ(0px);
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.grid__col__figure:hover .grid__col__figure__img {
+  -webkit-transform: scale(1) translateZ(0px);
+  transform: scale(1) translateZ(0px);
+}
+
+.grid__col__figure__link {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
+  z-index: 3;
+}
+
+.grid__col__inner {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+}
+
+.grid__col__details {
+  margin: 15px 0;
+}
+
+.grid__col__figure__caption--orange,
+.grid__col__figure__caption--blue,
+.grid__col__figure__caption--green,
+.grid__col__figure__caption--black {
+  background: graphics-path('sprite.png') no-repeat;
+  width: 193px;
+	height: 193px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'museo700';
+  padding: 10px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.grid__col__figure__caption--blue,
+.grid__col__figure__caption--green {
+  
+	height: 189px;
+}
+
+.grid__col__figure__caption--orange {
+  background-position: -1px -559px;
+}
+
+.grid__col__figure__caption--blue {
+  background-position: -1px -761px;
+}
+
+.grid__col__figure__caption--green {
+  background-position: -1px -961px;
+}
+
+.grid__col__figure__caption--black {
+  background-position: -1px -1159px;
+}
+
+.grid__col__figure__caption-text {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 105px;
+  
+}
+
+.grid__col__figure__caption-dark {
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background: rgba($black, 0.5);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'museo700';
+  padding: 10px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.grid__col__figure__caption-text-fluid {
+  display: block;
+  position: absolute;
+  line-height: 22px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}

@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/**
+ * Clear inner floats
+ */
+.clear{
+  clear: both;
+  
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  
+}
+
+.display_none {
+	display: none !important;
+}

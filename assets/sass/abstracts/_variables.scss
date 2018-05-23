@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// FONTS DIR PATH
+$fonts-dir-path: '../fonts' !default;
+
+// ICON FONTS DIR PATH
+$icon-fonts-dir-path: $fonts-dir-path + '/icons' !default;
+
+// TEXT FONTS DIR PATH
+$text-fonts-dir-path: $fonts-dir-path + '/typography' !default;
+
+// GRAPHICS DIR PATH
+$graphics-dir-path: '../../graphics' !default;
+
+// COLORS
+$orange: #f29220;
+$blue: #045393;
+$blue-dark: #00457D;
+$green: #4dc4c5;
+$white: #ffffff;
+$dark-grey: #909090;
+$light-grey: #f2f2f2;
+$dark-blue: #1b3d75;
+$light-blue: #294f82;
+
+
+$dark-dark: #888888;
+$medium-grey: #898989;
+$black: #2d2a27;
+
+$base-font-size: 18px;
+$base-line-height: 1.4;
+$base-font: 'Roboto', sans-serif;
+$base-color: $black;
+
+// PIKADAY VARIABLES
+// Declare any of these variables before importing this SCSS 
+// file to easily override defaults
+// Variables are namespaced with the pd (pikaday) prefix
+
+// Colours
+$pd-text-color: #333 !default;
+$pd-title-color: #333 !default;
+$pd-title-bg: #fff !default;
+$pd-picker-bg: #fff !default;
+$pd-picker-border: $light-grey !default;
+$pd-picker-border-bottom: #bbb !default;
+$pd-picker-shadow: rgba(0,0,0,.5) !default;
+$pd-th-color: #999 !default;
+$pd-day-color: #666 !default;
+$pd-day-bg: $white !default;
+$pd-day-hover-color: #fff !default;
+$pd-day-hover-bg: $orange !default;
+$pd-day-today-color: $white !default;
+$pd-day-selected-color: $white !default;
+$pd-day-selected-bg: $blue !default;
+$pd-day-selected-shadow: #178fe5 !default;
+$pd-day-disabled-color: #999 !default;
+$pd-week-color: #999 !default;
+
+// Font
+$pd-font-family: "museo300", Helvetica, Arial, sans-serif !default;

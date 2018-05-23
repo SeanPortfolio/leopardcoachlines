@@ -1,0 +1,130 @@
+.heroshot {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.heroshot__wrapper {
+  height: 80%;
+}
+
+.video__wrapper{
+	height: -moz-calc(80%);
+ 	height: -webkit-calc(80%);
+ 	height: calc(80%);
+    position: relative;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    
+	.video__wrapper--item{
+		height:inherit;
+	    overflow: hidden;		
+		height: 100%;
+
+		iframe {
+	    	position: absolute;    /* expand to fill */
+		    width: 100%;
+		    height: 100%;
+		    top: 0px;
+		    left: 0px;
+		    right: 0px;
+		    bottom: 0px;
+			cursor: pointer;	
+		}
+	}	
+}
+
+.slider__wrapper{
+	width: 100%;
+	height:80%;
+	z-index:1;
+	padding:0;
+	margin:0;
+	.hero__slider{
+		height: 100%;
+		background-size: cover;
+	 	z-index: 1;
+		.hero__slider__img{
+			width: 100%;
+			height: 100%;
+			background-size: cover !important;
+			background-position:center center;
+		}
+		&.container--fluid-fw{
+			padding-left:0;
+			padding-right:0;
+		}		
+	}
+
+	.slick-arrow{
+		position:absolute;
+		top:50%;
+		width:50px;
+		height:50px;
+		z-index: 2;
+		transform:translateY(-50%);
+		-webkit-transform:translateY(-50%);
+		font-size: 40px;
+		color:$white;
+		cursor: pointer;
+
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+
+		&:hover{
+			color:$blue;
+		}
+
+		i{
+			padding:4px 15px;
+		}
+  }
+  
+	.slick-arrow.hero__slider__prev{
+		left:10px;
+
+  }
+  
+	.slick-arrow.hero__slider__next{
+		right:10px;
+		text-align: right;
+	}
+}
+
+.heroshot--fs,.slider--fs,.video--fs{
+	height:100% !important;
+}
+
+.slider__nav {
+  color: $light-grey;
+  position: absolute;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 40px;
+  z-index:2;
+  background: none;
+  margin-top: -25px;
+}
+
+.slider__nav--prev {
+  left: 15px;
+}
+
+.slider__nav--next {
+  right: 15px;
+}

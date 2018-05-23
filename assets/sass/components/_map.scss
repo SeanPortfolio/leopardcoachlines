@@ -1,0 +1,77 @@
+.map__island path{
+  fill: $white;
+  stroke: $white;
+  
+}
+
+.map__island:hover path{
+  fill: rgba($green, 0.7);
+}
+
+.map__region-label {
+  fill: $white;
+  font-size: 16px;
+  font-family: 'museo700';
+}
+
+.map__island-label {
+  fill: $white;
+  font-size: 18px;
+  font-family: 'museo900';
+}
+
+.map__marker {
+  fill: $green;
+  stroke: $white;
+  stroke-width: 2px;
+  cursor: pointer;
+  position: relative;
+  
+  &:hover {
+    fill: $black;
+  }
+}
+
+.map__marker--lg {
+  fill: $orange;
+}
+
+.map__marker[data-title]:after {
+  content: attr(data-title);
+  position: absolute;
+}
+
+.mapp__label-hr {
+  fill: $light-grey;
+}
+
+.map__gateway-overlay,
+.map__island-label-overlay{
+  fill: transparent;
+}
+
+.map__gateway:hover {
+  .map__gateway-overlay {
+    fill: rgba($black, 0.6);
+  }
+  
+  .map__marker {
+    fill: $black;
+  }
+}
+
+.map__island:hover {
+  .map__island-label-overlay {
+    fill: rgba($black, 0.6);
+  }
+}
+
+.map--canvas {
+  height: 650px;
+}
+
+@media screen and (max-width: 767px) {
+  .map--canvas {
+    height: 400px;
+  }
+}

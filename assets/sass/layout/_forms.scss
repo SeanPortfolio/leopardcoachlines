@@ -1,0 +1,400 @@
+// GENERAL FORM STYLES
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -moz-appearance: textfield; 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield; 
+  -webkit-appearance: textfield; 
+  margin: 0; 
+}
+
+::-webkit-input-placeholder {
+  color: $medium-grey;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: $medium-grey;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: $medium-grey;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  color: $medium-grey;
+  opacity: 1;
+}
+
+input {
+  width: 100%;
+  border: 1px solid $dark-grey;
+  padding: 6px 15px;
+} 
+
+input[type="radio"],
+input[type="checkbox"],
+input[type="button"],
+input[type="submit"],
+input[type="range"],
+input[type="hidden"] {
+  width: auto;
+  border: none;
+  padding: 0;
+}
+
+.radio-inline,
+.checkbox-inline {
+  display: inline-block;
+  position: relative;
+  margin: 15px 15px 15px 0;
+  cursor: pointer;
+}
+
+.radio-inline__input,
+.checkbox-inline__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  
+}
+
+.radio-inline__icon,
+.checkbox-inline__icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background-color: #fff;
+  vertical-align: text-bottom;
+  margin-right: 5px;
+  top: -2px;
+  border: 1px solid rgba($dark-grey, 0.4);
+}
+
+.radio-inline__icon {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.radio-inline__input:checked ~ .radio-inline__icon:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  background: $black;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.checkbox-inline__input:checked ~ .checkbox-inline__icon:after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  font-size: 13px;
+  color: $black;
+}
+
+.form {
+  margin: 10px 0;
+  padding: 0;
+  position: relative;
+}
+
+.form--horizontal {
+  // padding: 0 15px;
+}
+
+.form__heading {
+  margin: 0 0 20px 0;
+  font-size: 34px;
+  color: inherit;
+}
+
+.form__intro {
+  font-family: 'museo500';
+}
+
+.form__hr {
+  border-top: 1px solid $dark-grey;
+}
+
+.form__fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.form__legend {
+  font-family: 'museo700';
+  color: $orange;
+  font-size: 26px;
+  margin: 5px 0 25px 0;
+}
+
+.form__group {
+  position: relative;
+  margin: 0 0 10px 0;
+}
+
+.form--horizontal {
+  .form__group {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  .form__group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  .form__label {
+    margin-top: 10px;
+  }
+  
+}
+
+.form__group--required .form__label:after{
+  display: inline-block;
+  font-family: 'FontAwesome';
+  content: "\f069";
+  color: $orange;
+  font-size: 11px;
+  vertical-align: text-top;
+  margin: 2px 0px 0px 2px;
+  
+}
+
+.form__group--select {
+  
+  &:before {
+    display: block;
+    font-family: 'FontAwesome';
+    content: "\f107";
+    color: $dark-grey;
+    font-size: 25px;
+    position: absolute;
+    right: 15px;
+    bottom: 6px;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  .form__control {
+    padding-right: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+}
+
+.form--horizontal {
+  .form__group--select {
+    
+    &:before {
+      right: 30px;
+    }
+  }
+}
+
+.form__label,
+.form__control {
+  font-size: 16px;
+}
+
+.form__label--sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.form__label {
+  display: inline-block;
+  color: $blue;
+  font-size: 18px;
+  font-family: 'museo900';
+  margin: 0 0 5px 0;
+  font-weight: 100;
+}
+
+.form__control {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 6px 15px;
+  color: $medium-grey;
+  background-color: $white;
+  background-image: none;
+  border: 1px solid rgba($dark-grey, 0.5);
+  
+  @include on-event {
+    outline: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  };
+}
+
+.form__input-group {
+  position: relative;
+  display: table;
+  -webkit-border-collapse: separate;
+  border-collapse: separate;
+  width: 100%;
+  
+  .form__control {
+    display: table-cell;
+    border-right: none;
+  }
+}
+
+.form__input-group-addon {
+  padding: 6px 15px;
+  font-size: 16px;
+  line-height: 1;
+  color: $medium-grey;
+  text-align: left;
+  background-color: $white;
+  display: table-cell;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid rgba($dark-grey, 0.5);
+  border-right: none;
+  width: 50px;
+}
+
+.form__input-group-addon ~ .form__control {
+  border-left: none;
+  border-right: 1px solid rgba($dark-grey, 0.5);
+  padding-left: 0px;
+}
+
+.form__control ~ .form__input-group-addon {
+  border-left: none;
+  text-align: right;
+  border-right: 1px solid rgba($dark-grey, 0.5);
+  padding-left: 0px;
+}
+
+.form__input-group-addon--ghost {
+  padding: 0;
+  background: transparent;
+}
+
+.form__control--trp,
+.form__control--trp ~ .form__input-group-addon {
+  background-color: rgba($white, 0.8);
+}
+
+.custom-select {
+  position: relative;
+  cursor: default;
+  @include disable-selection();
+  
+  &:after {
+    font-family: 'FontAwesome';
+    content: "\f107";
+    background: transparent;
+    font-size: 25px;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    padding-right: 15px;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+}
+
+.custom-select--active {
+  &:after {
+    content: "\f106"
+  }
+}
+
+.custom-select__label {
+  display: block;
+  margin: 0 -15px;
+  padding:9px 30px 9px 15px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.custom-select__dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 9999;
+  background-color: $white;
+  padding: 5px 0;
+  display: none;
+  @include drop-shadow();
+}
+
+.custom-select--active .custom-select__dropdown {
+  display: block;
+}
+
+.custom-select__option {
+  display: block;
+  padding: 5px 15px;
+  cursor: default;
+}
+
+.custom-select__option:hover,
+.custom-select__option--selected {
+  background: $blue;
+  color: $white;
+}
+
+@media screen and (max-width: 991px) {
+
+  .form--inline {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .form__group {
+      display: block;
+    }
+  }
+  
+}
+
+@media screen and (min-width: 992px) {
+
+  .form--inline {
+    .form__group {
+      display: inline-block;
+      vertical-align: top;
+    }
+    
+    .form__control {
+      width: 170px;
+    }
+  }
+  
+}

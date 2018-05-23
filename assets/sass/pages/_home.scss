@@ -1,0 +1,112 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.why-choose-us-container {
+  padding-top: 60px;
+}
+
+.why-choose-us-container__row {
+  padding: 50px 0px;
+}
+
+.why-choose-us__pattern {
+  position: absolute;
+  right: 0px;
+}
+
+.why-choose-us-container {
+  padding-right: 135px;
+  padding-left: 135px;
+}
+
+.why-choose-us-container__title {
+  margin-bottom: 60px;
+  letter-spacing: 5px;
+  font-size: 24px !important;
+}
+
+.why-choose-us-container__description {
+  color: $medium-grey;
+}
+
+.intro-container {
+  padding-top: 60px;
+  padding-bottom: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.intro-container__pattern {
+  position: absolute;
+  right: 0px;
+}
+
+.map-icon {
+    position: relative;
+    height: 23px;
+    background: $blue;
+    border-radius: 100%;
+    width: 23px;
+    color: white;
+  
+  i {
+    position: absolute;
+    left: 4px;
+    top: 3px;
+  }
+}
+.map-icon--akl {
+  bottom: 200px;
+  left: 84px;
+}
+
+.map-icon--chch {
+  bottom: 106px;
+  left: 62px;
+}
+
+.map__text {
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+  color: $medium-grey;
+}
+
+.map__text--akl {
+  bottom: 210px;
+}
+
+.map__text--chch {
+  bottom: 95px;
+  left: -26px;
+}
+
+
+@media (max-width: 991px) {
+
+  .map-location {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-top: 50px;
+    margin-bottom: -100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .why-choose-us-container {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 0px;
+  }
+  .intro-container {
+    padding: 35px;
+  }
+  .why-choose-us-container__title {
+    font-size: 18px !important;
+  }
+
+}

@@ -1,0 +1,233 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+[href],
+[type="button"],
+[type="submit"],
+button {
+  cursor: pointer;  
+}
+
+.btn,
+.link {
+  display: inline-block;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  
+}
+
+.btn {
+  font-family: 'Roboto';
+  cursor: pointer;
+  padding: 0 30px;
+  height: 42px;
+  line-height: 42px;
+  white-space: nowrap;
+  border-radius: 30px;
+  box-sizing: border-box;
+  //border: 2px solid;
+}
+
+.btn-sm {
+  height: 28px !important;
+  padding: 0 15px !important;
+  line-height: 28px !important;
+}
+
+.btn--ghost {
+  background: transparent;
+  border: 2px solid;
+}
+
+.btn--ghost--white {
+  color: $white;
+  border-color: $white;
+}
+
+.btn--ghost--hover-green{
+  &:hover {
+    background: $green;
+    color: $white;
+    //border-color: $green;
+  }
+}
+
+.btn--hover-white:hover {
+  background: $white;
+  border: 2px solid;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.btn--disabled {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.btn--grunge {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 0;
+  
+  &:before,
+  &:after {
+    background: graphics-path('sprite.png') 0px 0px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 51px;
+  }
+  
+  &:before {
+    left: -32px;
+  }
+  
+  &:after {
+    right: -51px;
+  }
+  
+}
+
+.btn--blue,
+.btn--hover-blue:hover {
+  background: $blue;  
+  border-color: $blue;
+  color: $white;
+}
+
+.btn--green,
+.btn--hover-green:hover {
+  background: $green;
+  color: #fff;
+  border-color: $green;
+  
+  &.btn--grunge:before {
+    background-position: 0 -253px;
+	  width: 33px;
+  }
+  
+  &.btn--grunge:after {
+    background-position: 0 -309px;
+	  width: 52px;
+  }
+  
+}
+
+.btn--green:hover {
+  background: $blue;
+  color: $white;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.btn--orange,
+.btn--hover-orange:hover {
+  background: $orange;
+  color: #fff;
+  
+  &.btn--grunge:before {
+    background-position: 0 -365px;
+	  width: 33px;
+  }
+  
+  &.btn--grunge:after {
+    background-position: 0 -421px;
+	  width: 52px;
+  }
+  
+}
+
+.btn--xs {
+  min-width: 185px;
+}
+
+.btn--sm {
+  min-width: 215px;
+}
+
+
+.btn--md {
+  min-width: 250px;
+}
+
+.btn--lg {
+  min-width: 285px;
+}
+
+.btn--xl {
+  min-width: 315px;
+}
+
+.link {
+  font-family: 'museo700';
+  color: inherit;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  
+  &:after {
+    content: "";
+    display: inline-block;
+    background: graphics-path('sprite.png') no-repeat 0 -34px;
+  	width: 25px;
+  	height: 10px;
+    vertical-align: middle;
+    margin: -10px 0 0 0px;
+    font-weight: 700;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+    transform: translateX(7px);
+  }
+  &:hover {
+    color: $orange;
+    
+    &:after{
+      transform: translateX(12px);
+    }
+  }
+}
+
+.link--blue {
+  color: $blue;
+}
+
+.link--green {
+  color: $green;
+}
+
+.link--orange {
+  color: $orange;
+}
+
+// BUTTTON FOR GALLERY
+
+.btn--gallery {
+  display: inline-block !important;
+  text-transform: uppercase;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  transition: all 250ms ease-in-out;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 10px 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .btn,
+  .link {
+    font-size: 18px;
+  }
+}

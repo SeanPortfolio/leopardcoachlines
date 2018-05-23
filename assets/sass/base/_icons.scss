@@ -1,0 +1,19 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: graphics-path('sprite.png');
+  background-repeat: no-repeat;
+  margin: -3px 3px 0 3px;
+}
+
+.icon--strokes-left {
+  background-position: 0 -73px;
+	width: 28px;
+	height: 29px;
+}
+
+.icon--strokes-right {
+  background-position: 0 -107px;
+	width: 28px;
+	height: 29px;
+}

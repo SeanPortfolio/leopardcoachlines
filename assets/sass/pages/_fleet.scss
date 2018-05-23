@@ -1,0 +1,138 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the fleet page.
+// -----------------------------------------------------------------------------
+
+.option {
+	margin-bottom: 50px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.option__header h2 {
+	font-size: 20px;
+	color: $green;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 4px;
+	position: relative;
+	display: inline-block;
+	padding: 0 70px;
+
+	span {
+		display: inline-block;
+	}
+
+	&:before,
+	&:after {
+		content: "";
+		width: 50px;
+		height: 0px;
+		border-top: 1px solid $blue;
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+  	transform: translateY(-50%);
+	}
+
+	&:before {
+		left: 0;
+	}
+
+	&:after {
+		right: 0;
+	}
+}
+
+.option__main {
+	background: $light-grey;
+	border-radius: 7px;
+	padding: 10px;
+	margin-top: 30px;
+}
+
+.option__inner {
+	position: relative;
+}
+
+.option__btn {
+	position: absolute;
+  display: inline-block;
+  left: 50%;
+  transform: translate(-50%, -28px);
+
+  .fa {
+		padding-left: 5px;
+  }
+}
+
+.option__feature {
+	background: $white;
+	padding: 30px;
+}
+
+.option__feature ul {
+	margin-top: 10px;
+	color: $dark-grey;
+	margin-left: 30px;
+	line-height: 30px;
+
+	columns: 2;
+	-webkit-columns: 2;
+	-moz-columns: 2;
+
+	ul {
+		columns: 1;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+	}
+}
+
+.option__feature ul li:before {
+	display: inline-block;
+  color: $blue;
+	content: "\002022";
+	width: 1em;
+  margin-left: -5px;
+}
+
+.option__feature ul li ul li:before {
+	color: $blue;
+	display: inline-block;
+  content: "-";
+  width: 1em;
+  margin-left: -5px;
+}
+
+.pattern-left {
+	position: absolute;
+  top: 30px;
+  left: -150px;
+}
+
+.pattern-right {
+	position: absolute;
+  top: 30px;
+  right: -150px;
+}
+
+@media screen and (max-width: 767px) {
+	
+	.option__header h2 {
+		padding: 0px 0px;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+	.option__feature ul {
+		margin-left: 0px;
+		font-size: 16px;
+		columns: 1;
+    -webkit-columns: 1;
+	}
+
+	.slick-list {
+		height: 400px;
+	}
+}

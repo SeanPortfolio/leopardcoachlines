@@ -1,0 +1,92 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@mixin drop-shadow {
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(#a4a3a3, 0.55);
+  box-shadow: 0px 0px 4px 0px rgba(#a4a3a3, 0.55);
+}
+
+@mixin disable-selection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin translate($valX: -50%, $valY: -50%) {
+  transform: -webkit-translate($valX, $valY);
+  transform: translate($valX, $valY);
+}
+
+@mixin translateX($val: -50%) {
+  transform: -webkit-translateX($val);
+  transform: translateX($val);
+}
+
+@mixin translateY($val: -50%) {
+  transform: -webkit-translateY($val);
+  transform: translateY($val);
+}
+
+/// Mixin to enerate vendor prefixes
+/// @author stolen
+///
+/// @param {String} $property - Property name
+/// @param {*} $value - Property value
+/// @param {List} $prefixes (()) - List of prefixes to generate
+///
+/// @example scss - Usage
+///   .hello {
+///      @include vendor-prefix(transform, translate(-50%), webkit ms moz o);
+///   }
+///
+///  @example css - CSS output
+///    .hello {
+///      -webkit-transform: translate(-50%);
+///      -ms-transform: translate(-50%);
+///      -moz-transform: translate(-50%);
+///      -o-transform: translate(-50%);
+///      transform: translate(-50%);
+///  }
+/// @link https://css-tricks.com/snippets/sass/mixin-prefix-properties/
+@mixin vendor-prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}

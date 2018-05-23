@@ -1,0 +1,203 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  padding: 34px 0 0;
+}
+
+.footer__social-links {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  li {
+    display: inline;
+    font-size: 37px;
+    margin: 15px;
+    color: $blue;    
+  }
+  a:hover {
+    color: $green !important;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+}
+
+.footer__nav {
+  ul li {
+    margin: 15px;
+    display: inline;
+  }
+  a:hover {
+    color: $green;
+  }
+}
+
+.footer__contact {
+  text-align: left;
+}
+
+.footer__contact-details {
+  //margin-left: 20px;
+  i {
+    color: $blue;
+    margin-right: 10px;
+  }
+   li {
+    display: block !important;
+    margin: 20px 0px;
+    padding: 0 35px;
+  }
+}
+.footer__contact__title {
+  margin-left: 60px;
+  margin-bottom: 30px;
+}
+
+.footer__newsletter {
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+.footer__newsletter__title {
+  color: $green;
+  font-weight: bold;
+  letter-spacing: 10px;
+  margin-top: 20px;
+  text-align: left;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.footer__newsletter-form p {
+  font-family: 'museo500';
+}
+
+.footer__newsletter-form__fieldset {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.footer__newsletter-form__input {
+  border-radius: 50px;
+  max-width: 300px;
+  background: $light-grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+}
+
+.footer__newsletter-form__btn {
+  margin-left: -35px;
+  display: inline-block;
+  padding-bottom: 45px;
+  padding-top: 2px;
+}
+
+.footer__social-icons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer__credits {
+  margin-left: 40px;
+  margin-bottom: 70px;
+
+  a:hover {
+    color: $blue !important;
+  }
+}
+
+// FOOTER LOGIN FORM
+.footer__lower-form-heading {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.footer_nav--active {
+  font-weight: bold;
+  color: $blue;
+}
+
+.footer__nav {
+  color: $dark-dark;
+}
+
+.footer__social {
+  text-align: left;
+  display: inline-block;
+}
+
+.msg {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 991px) {
+
+.footer {
+
+    nav {
+      a {
+        display: block;
+      }
+    }
+  }
+  .footer__newsletter {
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .footer__social-links {
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 0px;
+
+    li {
+      display: inline;
+      color: $blue;
+      font-size: 30px;
+    }
+  }
+
+  .footer__contact {
+    text-align: center;
+  }
+
+  .footer__contact__title {
+    margin: 0px;
+  }
+
+  .footer__newsletter__title {
+    text-align: center;
+    margin-left: 0px;
+    letter-spacing: 7px;
+  }
+
+  .footer__social {
+    display: block;
+    text-align: center;
+  }
+
+  .footer__nav {
+    display: block;
+    text-align: center;
+    ul li {
+      display: block;
+    }
+  }
+
+  .footer__img-pattern-down {
+    position: absolute;
+  }
+
+  .footer__credits {
+    text-align: center;
+    margin-left: 0px;
+  }
+  
+  .footer__newsletter-form__btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}

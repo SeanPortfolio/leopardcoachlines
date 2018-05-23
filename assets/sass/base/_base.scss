@@ -1,0 +1,142 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  
+}
+
+body {
+  background: $white;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::-ms-selection { 
+	background: $blue;
+	color: $white;
+}
+
+::-moz-selection { 
+	background: $blue;
+	color: $white;
+}
+
+::-webkit-selection { 
+	background: $blue;
+	color: $white;
+}
+::selection { 
+	background: $blue;
+	color: $white;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: 100;
+  font-family: 'Roboto';
+}
+
+// Main content
+
+.main {
+  padding: 15px 0;
+}
+
+// GRID
+.container {
+  max-width: 100%;
+}
+
+.container--compact {
+  padding: 0 5px;
+}
+
+.row--compact {
+  margin: 0 -5px;
+}
+
+.col--compact {
+  padding: 0 5px;
+}
+
+// WELL & JUMBOTRON STYLES
+.well {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background-color: $light-grey;
+  padding: 10px 35px 15px 35px;
+  margin: 30px 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.bg-light-grey {
+  background: $light-grey;
+}
+
+.bg-medium-grey {
+  background: $medium-grey;
+}
+
+.bg-white-solid {
+  background: $white;
+}
+
+.bg-black {
+  background: $black;
+}
+
+.bg-green {
+  background: $green !important;
+}
+
+.bg-blue {
+  background: $dark-blue !important;
+}
+
+.no-border {
+  border: none !important;
+}
+
+#main {
+  margin-bottom: 40px;
+}
+.no-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+

@@ -1,0 +1,119 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the primary navigation of application
+// -----------------------------------------------------------------------------
+
+.header {
+  @include drop-shadow;
+}
+
+.header__nav__link {
+  font-family: 'museo700';
+  font-size: 17px;
+}
+
+@media screen and (max-width: 991px) {
+  .header__nav-toggler {
+    display: inline-block;
+    float: left;
+    color: $black;
+    font-size: 28px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .header__nav-toggler--active .header__nav-toggler__icon:before {
+    content: "\f00d";
+  }
+  
+  .header__nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $black;
+    padding: 40px 0;
+    text-align: left;
+    height: auto;
+    height: -moz-calc(100vh - 50px);
+    height: -webkit-calc(100vh - 50px);
+    height: calc(100vh - 50px);
+    overflow: auto;
+    
+  }
+  
+  .header__nav--shown,
+  .header__nav:target {
+    display: block;
+  }
+  
+  .header__nav__item {
+    display: block;
+  }
+  
+  .header__nav__link {
+    color: $orange;
+    display: inline-block;
+    padding: 6px 15px;
+    
+    @include on-event {
+      color: $green;
+    };
+  }
+  
+  
+}
+
+@media screen and (min-width: 767px) {
+  
+  .header__nav-toggler {
+    margin-top: 15px;
+  }
+  
+}
+
+@media screen and (min-width: 992px) {
+  
+  .header__nav-toggler {
+    display: none;
+  }
+  
+  .header__nav {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .header__nav__item {
+    display: inline-block;
+    
+    &:not(:first-child) {
+      margin-left: 15px;
+      margin-right: -4px;
+      
+      .header__nav__link:before {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $blue;
+        vertical-align: text-top;
+        margin: 8px 15px 0 0;
+      }
+      
+    }
+    
+  }
+  
+  .header__nav__link {
+    color: $black;
+    display: block;
+    padding: 23px 0;
+    
+    @include on-event() {
+      color: $orange;
+    };
+    
+  }
+  
+}

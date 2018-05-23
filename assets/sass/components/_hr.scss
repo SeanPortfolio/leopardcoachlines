@@ -1,0 +1,42 @@
+.hr {
+  display: block;
+  margin: 15px 0;
+}
+
+.hr--default {
+  width: 0px;
+  height: 0px;
+  border-top: 1px solid;
+}
+
+.hr--ctr {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hr--blue,
+.hr--green,
+.hr--orange {
+  width: 75px;
+	height: 6px;
+  background: graphics-path('sprite.png') no-repeat;
+}
+
+.hr--blue {
+  background-position: 0 0;
+}
+
+.hr--green {
+  background-position: 0 -11px;
+}
+
+.hr--orange {
+  background-position: 0 -22px;
+}
+
+.hr--vrt {
+  background: graphics-path('sprite.png') no-repeat 0 -1571px;
+	width: 5px;
+	height: 361px;
+  
+}

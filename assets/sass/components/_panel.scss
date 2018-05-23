@@ -1,0 +1,25 @@
+.panel__heading {
+  margin: 0 0 20px 0;
+  font-size: 34px;
+  color: inherit;
+}
+
+.panel__info {
+  
+  font-family: 'museo700';
+  font-size: 18px;
+  margin: 10px 0 20px 0;
+  
+}
+
+.panel--estimate-info {
+  margin-top: 20px;
+  text-align: center;
+  
+}
+
+@media screen and (min-width: 1200px) {
+  .panel--estimate-info {
+    margin-top: 45px;
+  }
+}

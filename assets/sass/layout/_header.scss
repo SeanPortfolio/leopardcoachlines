@@ -1,0 +1,193 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  background: #fff;
+  height: 51px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 7;
+  border-bottom: solid 3px $blue-dark;
+
+  .toggle-elm {
+    width: 55px;
+    font-size: 25px;
+    margin-left: -16px;
+    text-align: center;
+    line-height: 50px;
+    display: inline-block;
+    color: $green;
+    height: 100%;
+    vertical-align: middle;
+
+    &.active {
+      background: $blue-dark;
+      color: $green;
+      i:before{
+        content: "\f00d";
+      }
+    }
+  }
+
+  .toggle-snav {
+   &.active:before {
+     content: "\f106";
+   }
+  }
+
+  img {
+    width: 100px;
+    margin-left: 5px;
+  }
+
+  .btn-header {
+    float: right;
+    transform: translateY(45%);
+    width: 119px;
+  }
+  
+}
+
+.header-pusher {
+  height: 85px;
+}
+nav {
+  .active {
+    color: $blue-dark;
+  }
+}
+.primary-nav {
+  display: none;
+  margin-top: 30px;
+  
+
+  &.active {
+    display: block;
+    margin-top: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: calc(100vh - 51px);
+    background: #fff;
+    width: 100%;
+    padding-top: 30px;
+  }
+  i {
+    font-size: 25px;
+    padding-left: 10px;
+    transform: translateY(18%);
+  }
+  
+
+  ul li {
+    display: block;
+    border-bottom: 1px solid $light-grey;
+    margin: 10px;
+    padding-bottom: 10px;
+  }
+
+  ul li .active {
+    color: $green;
+  }
+
+  .sub-menu {
+    display: none;
+    li {
+      border: none;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .header {
+    .btn-header {      
+      margin-top: -3px;
+      width: 100px;
+
+      i {
+      cursor: pointer;
+     }
+    }
+
+    .primary-nav {
+      &.active {
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+    }
+    .toggle-elm {
+      i {
+        margin-top: 10px;
+      }
+    }
+  }
+  .header-pusher {
+    height: 50px;
+  } 
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    height: 85px;
+    border-bottom: 5px solid $blue;
+
+    img {
+      display: inline-block !important;
+  
+    }
+
+    .has-menu:hover {
+      position: relative;
+      &:hover {
+        .sub-menu {
+          display: block;
+          position: absolute;
+          left: 0px;
+          top: 30px;
+          white-space: nowrap;
+          border-radius: 7px;
+        }
+        ul {
+          background: $light-grey !important;
+        }
+        ul li {
+          display: block !important;
+          padding: 3px 15px;
+        }
+      } 
+
+    }
+    .footer__credits {
+      float: left;
+    }
+
+    ul li {
+      display: inline !important;
+      border: none !important;
+      color: $medium-grey;
+    }
+  }
+
+  .logo__wrapper {
+    position: fixed;
+    z-index: 99;
+    top: 16px;
+    width: 211px;
+  }
+
+  .btn {
+    display: block;
+  }
+
+  .btn-header {
+    transform: translateY(-22%) !important;
+  }
+
+  nav {
+    display: block !important;
+    float: right;
+  }
+  
+}

@@ -1,0 +1,4 @@
+
+.checkbox-tag {
+  @include vendor-prefix(appearance, none, ('webkit', 'moz', 'ms'));
+}

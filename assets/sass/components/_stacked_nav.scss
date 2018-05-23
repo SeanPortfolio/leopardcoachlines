@@ -1,0 +1,23 @@
+.nav__heading {
+  font-size: 22px;
+  color: #5c6059;
+}
+
+.nav__list {
+  margin: 10px 0;
+}
+
+.nav__item {
+  display: block;
+  margin: 5px 0;
+}
+
+.nav__link {
+  display: inline-block;
+  color: inherit;
+  font-family: 'museo700';
+}
+
+.nav__item .nav__link:hover {
+  color: $blue;
+}

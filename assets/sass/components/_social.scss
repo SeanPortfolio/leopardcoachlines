@@ -1,0 +1,19 @@
+.social-icons {
+  list-style: none;
+}
+
+.social-icons__item {
+  display: inline-block;
+  margin: 0 -4px 0 10px;
+}
+
+.social-icons__link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+}
+
+.social-icons__item:hover .social-icons__link {
+  color: $green;
+}
